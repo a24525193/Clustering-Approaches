@@ -30,15 +30,24 @@ The second data set is the HCV detection data of blood donors and hepatitis C, w
 
 14 characteristic information:
 
--ID: Patient ID, No
--Category: 0=Blood Donor; 0s=suspect Blood Donor; 1=Hepatitis hepatitis; 2=Fibrosis; 3=Cirrhosis cirrhosis
--Age: patient's age (years)
--Sex: f=female, m=male
+- ID: Patient ID, No
+- Category: 0=Blood Donor; 0s=suspect Blood Donor; 1=Hepatitis hepatitis; 2=Fibrosis; 3=Cirrhosis cirrhosis
+- Age: patient's age (years)
+- Sex: f=female, m=male
 
 The fifth to the fourteenth characteristics are: ALB, ALP, ALT, AST, BIL, CHE, CHOL, CREA, GGT, PROT
 
 ## Package used
 
 ```
-
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.cluster import KMeans
+from sklearn import preprocessing
+from sklearn.preprocessing import StandardScaler
+from scipy.spatial.distance import cdist
+from sklearn.metrics import silhouette_score
+import scipy.cluster.hierarchy as sch
 ```
