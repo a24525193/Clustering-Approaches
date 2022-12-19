@@ -93,9 +93,9 @@ Set model parameters. The parameter meanings of the function are as follows:
 -	init: default k-means++ {random, k-means++}, the selection method of the initial centroid.
 -	n_init: default 10, execute the k-means algorithm times with randomly selected centroids, and use the model with the lowest SSE as the final model
 - max_ Iter: default 300, the maximum number of iterations per execution. In K-Means, if the execution result converges. it is possible to abort in advance, instead of executing to the maximum number of iterations.
--Tol: default 0.0001, which controls the allowable error of the sum of squares of errors in the cluster. Setting a large value can effectively converge
+- Tol: default 0.0001, which controls the allowable error of the sum of squares of errors in the cluster. Setting a large value can effectively converge
 - random_ State: random number seed
--Algorithm: default auto {'auto ',' full ',' elkan '}, the algorithm of distance calculation, in practice, it is recommended that the algorithm automatically judge the sparsity of the data.
+- Algorithm: default auto {'auto ',' full ',' elkan '}, the algorithm of distance calculation, in practice, it is recommended that the algorithm automatically judge the sparsity of the data.
 
 
 I use the K-Means++ method. Set K to 4 and the number of iterations to 500 to perform K-Means clustering.
@@ -121,3 +121,4 @@ Set model parameters. The parameter meanings of the function are as follows:
 - metric：The distance metric to use in the case that y is a collection of observation vectors; ignored otherwise. 
 - optimal_ordering：If True, the linkage matrix will be reordered so that the distance between successive leaves is minimal. This results in a more intuitive tree structure when the data are visualized. defaults to False, because this algorithm can be slow, particularly on large datasets.
 
+After building the module, make the result into a scatter and output it into a plot.
